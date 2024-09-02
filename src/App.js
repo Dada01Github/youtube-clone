@@ -2,6 +2,18 @@ import React from 'react';
 import './App.css';
 
 function App() {
+  const [searchQuery, setSearchQuery] = React.useState('');
+
+  const handleSearchChange = (event) => {
+    setSearchQuery(event.target.value);
+  };
+
+  const handleSearchSubmit = (event) => {
+    event.preventDefault();
+    // 处理搜索提交逻辑
+    console.log('搜索查询:', searchQuery);
+  };
+
   return (
     <div className="App">
       <header className="App-header">
@@ -30,9 +42,19 @@ function App() {
         <div className="video-card">
           <img src={`${process.env.PUBLIC_URL}/video-thumbnail2.jpg`} alt="Video Thumbnail" className="thumbnail" />
           <div className="video-info">
-            <h3>普京访问蒙古 德国右翼胜选</h3>
-            <p>SHA SA 萨沙</p>
+            <h3>普京 德国</h3>
+            <p>SHA SA </p>
           </div>
+          <form onSubmit={handleSearchSubmit} className="google-search-form">
+            <input
+              type="text"
+              placeholder="Google Search"
+              value={searchQuery}
+              onChange={handleSearchChange}
+              className="google-search-bar"
+            />
+            <button type="submit" className="google-search-button">Search</button>
+          </form>
         </div>
         <div className="video-card">
           <img src={`${process.env.PUBLIC_URL}/video-thumbnail3.jpg`} alt="Video Thumbnail" className="thumbnail" />

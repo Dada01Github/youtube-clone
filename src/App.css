@@ -69,3 +69,32 @@
 .video-info {
   padding: 10px;
 }
+
+.google-search-form {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.google-search-bar {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.google-search-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: white;
+  background-color: #4285F4;
+  border: none;
+  border-radius: 4px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.google-search-button:hover {
+  background-color: #357ae8;
+}
