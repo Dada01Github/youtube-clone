@@ -1,8 +1,11 @@
 import React from 'react';
+import { BrowserRouter as Router, Route, Routes, useNavigate } from 'react-router-dom';
 import './App.css';
+import SearchResults from './SearchResults';
 
 function App() {
   const [searchQuery, setSearchQuery] = React.useState('');
+  const navigate = useNavigate();
 
   const handleSearchChange = (event) => {
     setSearchQuery(event.target.value);
@@ -10,8 +13,7 @@ function App() {
 
   const handleSearchSubmit = (event) => {
     event.preventDefault();
-    // 处理搜索提交逻辑
-    console.log('搜索查询:', searchQuery);
+    navigate(`/search?query=${searchQuery}`);
   };
 
   return (
@@ -68,4 +70,15 @@ function App() {
   );
 }
 
-export default App;
+function AppWrapper() {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<App />} />
+        <Route path="/search" element={<SearchResults />} />
+      </Routes>
+    </Router>
+  );
+}
+
+export default AppWrapper;
