@@ -1,0 +1,71 @@
+.App {
+  font-family: Arial, sans-serif;
+}
+
+.App-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #f1f1f1;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 40px;
+  margin-right: 20px;
+}
+
+.search-bar {
+  padding: 5px;
+  width: 300px;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+.user-icon {
+  height: 40px;
+}
+
+.App-nav {
+  display: flex;
+  justify-content: space-around;
+  background-color: #e1e1e1;
+  padding: 10px 0;
+}
+
+.App-nav button {
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.App-main {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.video-card {
+  width: 30%;
+  margin: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.thumbnail {
+  width: 100%;
+  height: auto;
+}
+
+.video-info {
+  padding: 10px;
+}
